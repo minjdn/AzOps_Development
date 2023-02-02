@@ -11,18 +11,18 @@
   "resources": [
     {
       "type": "Microsoft.Authorization/policyAssignments",
-      "name": "Deny-Subnet-Without-Nsg",
+      "name": "a60c7b562f3e4a11bb2b524d",
       "apiVersion": "2022-06-01",
       "location": null,
       "properties": {
-        "Description": "This policy denies the creation of a subnet without a Network Security Group to protect traffic across subnets.",
-        "DisplayName": "Subnets should have a Network Security Group",
+        "Description": null,
+        "DisplayName": "Azure Backup should be enabled for Virtual Machines",
         "EnforcementMode": "Default",
         "NonComplianceMessages": [],
         "NotScopes": [],
         "Parameters": {},
-        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/xms/providers/Microsoft.Authorization/policyDefinitions/Deny-Subnet-Without-Nsg",
-        "Scope": "/providers/Microsoft.Management/managementGroups/xms-platform"
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/013e242c-8828-4970-87b3-ab247555486d",
+        "Scope": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8"
       }
     }
   ],

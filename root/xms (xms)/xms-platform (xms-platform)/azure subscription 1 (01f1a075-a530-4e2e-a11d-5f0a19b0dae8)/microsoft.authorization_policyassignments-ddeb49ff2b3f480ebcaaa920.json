@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "ddeb49ff2b3f480ebcaaa920",
+      "apiVersion": "2022-06-01",
+      "location": "eastus",
+      "identity": {
+        "PrincipalId": "a31322fb-b74b-40d1-b0c0-75a29d6f98a9",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "",
+        "DisplayName": "my-pol-sql",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": [],
+        "NotScopes": [],
+        "Parameters": {
+          "effect": {
+            "value": "DeployIfNotExists"
+          }
+        },
+        "PolicyDefinitionId": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/providers/Microsoft.Authorization/policyDefinitions/fcc1bed3-7607-40a6-acc8-8782e26039b6",
+        "Scope": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8"
+      }
+    }
+  ],
+  "outputs": {}
+}

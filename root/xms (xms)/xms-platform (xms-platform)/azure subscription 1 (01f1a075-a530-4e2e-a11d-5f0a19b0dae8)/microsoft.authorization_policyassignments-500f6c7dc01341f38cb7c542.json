@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "500f6c7dc01341f38cb7c542",
+      "apiVersion": "2022-06-01",
+      "location": "eastus",
+      "identity": {
+        "PrincipalId": "7961aaa5-6fb8-41e5-aca8-920fdf84edcf",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": null,
+        "DisplayName": "Configure backup on virtual machines with a given tag to an existing recovery services vault in the same location",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": [],
+        "NotScopes": [],
+        "Parameters": {
+          "backupPolicyId": {
+            "value": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourcegroups/myrg/providers/microsoft.recoveryservices/vaults/myvault/backuppolicies/mypol"
+          },
+          "inclusionTagName": {
+            "value": "backup"
+          },
+          "inclusionTagValue": {
+            "value": [
+              "weekly"
+            ]
+          },
+          "vaultLocation": {
+            "value": "westeurope"
+          }
+        },
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/345fa903-145c-4fe1-8bcd-93ec2adccde8",
+        "Scope": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8"
+      }
+    }
+  ],
+  "outputs": {}
+}
