@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-AzActivity-Log",
+      "apiVersion": "2022-06-01",
+      "location": "northeurope",
+      "identity": {
+        "PrincipalId": "bff64675-7bb2-4b4b-a28f-c90b098abf20",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "Deploys the diagnostic settings for Azure Activity to stream subscriptions audit logs to a Log Analytics workspace to monitor subscription-level events",
+        "DisplayName": "Configure Azure Activity logs to stream to specified Log Analytics workspace",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": null,
+        "NotScopes": null,
+        "Parameters": {
+          "logAnalytics": {
+            "value": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourceGroups/xms-mgmt/providers/Microsoft.OperationalInsights/workspaces/xms-law"
+          },
+          "logsEnabled": {
+            "value": "True"
+          }
+        },
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2465583e-4e78-4c15-b6be-a36cbc7c8b0f",
+        "Scope": "/providers/Microsoft.Management/managementGroups/xms"
+      }
+    }
+  ],
+  "outputs": {}
+}

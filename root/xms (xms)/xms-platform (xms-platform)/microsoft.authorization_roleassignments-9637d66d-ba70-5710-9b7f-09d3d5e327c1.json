@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "9637d66d-ba70-5710-9b7f-09d3d5e327c1",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "DisplayName": "Deploy-Log-Analytics",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "d441bd2d-be1e-434c-9527-7c5ae6e0f9c2",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+        "RoleDefinitionName": "Contributor"
+      }
+    }
+  ],
+  "outputs": {}
+}

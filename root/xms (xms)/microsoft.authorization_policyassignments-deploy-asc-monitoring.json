@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-ASC-Monitoring",
+      "apiVersion": "2022-06-01",
+      "location": "northeurope",
+      "identity": {
+        "PrincipalId": "6e2185d1-8afa-4052-82ca-d240ef246724",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "Microsoft Cloud Security Benchmark policy initiative.",
+        "DisplayName": "Microsoft Cloud Security Benchmark",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": null,
+        "NotScopes": null,
+        "Parameters": {},
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+        "Scope": "/providers/Microsoft.Management/managementGroups/xms"
+      }
+    }
+  ],
+  "outputs": {}
+}

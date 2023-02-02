@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "3c92655e-8cd3-5a39-aeea-1518bf8b0485",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "DisplayName": "Deploy-VM-Monitoring",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "96a5d0d2-e6f4-48ec-88bb-a7c788d0d6cb",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}

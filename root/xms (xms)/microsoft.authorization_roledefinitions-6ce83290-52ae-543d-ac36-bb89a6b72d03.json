@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleDefinitions",
+      "name": "6ce83290-52ae-543d-ac36-bb89a6b72d03",
+      "apiVersion": "2022-05-01-preview",
+      "properties": {
+        "RoleName": "[xms] Application-Owners",
+        "Description": "Contributor role granted for application/operations team at resource group level",
+        "AssignableScopes": [
+          "/providers/Microsoft.Management/managementGroups/xms"
+        ],
+        "Permissions": [
+          {
+            "Actions": [
+              "*"
+            ],
+            "DataActions": [],
+            "NotActions": [
+              "Microsoft.Authorization/*/write",
+              "Microsoft.Network/publicIPAddresses/write",
+              "Microsoft.Network/virtualNetworks/write",
+              "Microsoft.KeyVault/locations/deletedVaults/purge/action"
+            ],
+            "NotDataActions": []
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {}
+}

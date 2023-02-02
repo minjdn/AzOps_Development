@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-Log-Analytics",
+      "apiVersion": "2022-06-01",
+      "location": "northeurope",
+      "identity": {
+        "PrincipalId": "d441bd2d-be1e-434c-9527-7c5ae6e0f9c2",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "Deploy resource group containing Log Analytics workspace and linked automation account to centralize logs and monitoring. The automation account is aprerequisite for solutions like Updates and Change Tracking.",
+        "DisplayName": "Configure Log Analytics workspace and automation account to centralize logs and monitoring",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": null,
+        "NotScopes": null,
+        "Parameters": {
+          "automationAccountName": {
+            "value": "xms-aauto"
+          },
+          "automationRegion": {
+            "value": "northeurope"
+          },
+          "dataRetention": {
+            "value": "30"
+          },
+          "rgName": {
+            "value": "xms-mgmt"
+          },
+          "workspaceName": {
+            "value": "xms-law"
+          },
+          "workspaceRegion": {
+            "value": "northeurope"
+          }
+        },
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e3e61b3-0b32-22d5-4edf-55f87fdb5955",
+        "Scope": "/providers/Microsoft.Management/managementGroups/xms-platform"
+      }
+    }
+  ],
+  "outputs": {}
+}
