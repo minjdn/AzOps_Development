@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "8da77f480d0d47328b3b6ae9",
+      "apiVersion": "2022-06-01",
+      "location": "eastus",
+      "identity": {
+        "PrincipalId": "0b95ea70-871b-40a2-9655-eb8a27c79559",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "",
+        "DisplayName": "Configure disaster recovery on virtual machines by enabling replication via Azure Site Recovery",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": [],
+        "NotScopes": [],
+        "Parameters": {
+          "cacheStorageAccountId": {
+            "value": "r040kqasr"
+          },
+          "recoveryNetworkId": {
+            "value": "myrg-asr-vnet-asr"
+          },
+          "sourceRegion": {
+            "value": "westeurope"
+          },
+          "tagName": {
+            "value": "disaster"
+          },
+          "tagType": {
+            "value": "Inclusion"
+          },
+          "tagValue": {
+            "value": [
+              "disaster"
+            ]
+          },
+          "targetRegion": {
+            "value": "northeurope"
+          },
+          "targetResourceGroupId": {
+            "value": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourcegroups/myrg-asr"
+          },
+          "targetZone": {
+            "value": ""
+          },
+          "vaultId": {
+            "value": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourceGroups/NetworkWatcherRG/providers/Microsoft.RecoveryServices/vaults/NetworkWatcherRGsite-recoveryVault-asr"
+          },
+          "vaultResourceGroupId": {
+            "value": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourceGroups/NetworkWatcherRG"
+          }
+        },
+        "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac34a73f-9fa5-4067-9247-a3ecae514468",
+        "Scope": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourceGroups/myrg"
+      }
+    }
+  ],
+  "outputs": {}
+}
