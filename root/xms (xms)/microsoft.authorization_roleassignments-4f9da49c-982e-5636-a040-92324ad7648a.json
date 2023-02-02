@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "name": "4f9da49c-982e-5636-a040-92324ad7648a",
+      "apiVersion": "2022-04-01",
+      "properties": {
+        "DisplayName": "Deploy-AzActivity-Log",
+        "ObjectType": "ServicePrincipal",
+        "PrincipalId": "bff64675-7bb2-4b4b-a28f-c90b098abf20",
+        "RoleDefinitionId": "/providers/Microsoft.Authorization/RoleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+        "RoleDefinitionName": "Owner"
+      }
+    }
+  ],
+  "outputs": {}
+}

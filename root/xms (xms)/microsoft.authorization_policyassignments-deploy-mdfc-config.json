@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-MDFC-Config",
+      "apiVersion": "2022-06-01",
+      "location": "northeurope",
+      "identity": {
+        "PrincipalId": "486c048d-cc74-455a-bfc8-0ad5dc662a61",
+        "TenantId": "710750a5-0bc6-488c-8c5f-409b88e4f510",
+        "Type": "SystemAssigned"
+      },
+      "properties": {
+        "Description": "Deploy Microsoft Defender for Cloud and Security Contacts",
+        "DisplayName": "Deploy Microsoft Defender for Cloud configuration",
+        "EnforcementMode": "Default",
+        "NonComplianceMessages": null,
+        "NotScopes": null,
+        "Parameters": {
+          "ascExportResourceGroupLocation": {
+            "value": "northeurope"
+          },
+          "ascExportResourceGroupName": {
+            "value": "xms-asc-export"
+          },
+          "emailSecurityContact": {
+            "value": "mindaugas.jedinkus@gmail.com"
+          },
+          "enableAscForAppServices": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForArm": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForContainers": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForCosmosDbs": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForDns": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForKeyVault": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForOssDb": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForServers": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForSql": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForSqlOnVm": {
+            "value": "DeployIfNotExists"
+          },
+          "enableAscForStorage": {
+            "value": "DeployIfNotExists"
+          },
+          "logAnalytics": {
+            "value": "/subscriptions/01f1a075-a530-4e2e-a11d-5f0a19b0dae8/resourceGroups/xms-mgmt/providers/Microsoft.OperationalInsights/workspaces/xms-law"
+          }
+        },
+        "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/xms/providers/Microsoft.Authorization/policySetDefinitions/Deploy-MDFC-Config",
+        "Scope": "/providers/Microsoft.Management/managementGroups/xms"
+      }
+    }
+  ],
+  "outputs": {}
+}
