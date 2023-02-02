@@ -8,8 +8,7 @@
             "Core.EnrollmentAccountPrincipalName": "",
             "Core.ExcludedSubOffer": [
                 "AzurePass_2014-09-01",
-                "FreeTrial_2014-09-01",
-                "AAD_2015-09-01"
+                                "AAD_2015-09-01"
             ],
             "Core.ExcludedSubState": [
                 "Disabled",
